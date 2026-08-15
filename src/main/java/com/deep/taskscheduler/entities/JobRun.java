@@ -1,16 +1,14 @@
 package com.deep.taskscheduler.entities;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDateTime;
 @Entity
 @Table(name = "JobRun")
 @Getter
 @Setter
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class JobRun {
@@ -34,4 +32,5 @@ public class JobRun {
 
     @Column(columnDefinition = "TEXT")
     private String errorMessage;
+
 }
